@@ -2,8 +2,6 @@ import React from "react";
 import Square from "./Square";
 
 function Board({ squares, onClick, winLine }) {
-  console.log(winLine);
-
   const renderBoard = () => {
     const board = squares.map((row, rowIndex) => (
       <div className="board-row" key={rowIndex}>
