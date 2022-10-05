@@ -84,18 +84,19 @@ const Game = () => {
 
   return (
     <div className="game">
+      <div className="game-options">
+        <div className="text">Options:</div>
+        <button onClick={() => handleSort()}>
+          Sort by {isAsc ? "Descending" : "Ascending"}
+        </button>
+      </div>
+
       <div className="game-board">
         <Board
           squares={current.squares}
           onClick={(xLocation, yLocation) => handleClick(xLocation, yLocation)}
           winLine={gameCondition.winLine}
         />
-      </div>
-      <div className="game-options">
-        <div className="text">Options:</div>
-        <button onClick={() => handleSort()}>
-          Sort by {isAsc ? "Descending" : "Ascending"}
-        </button>
       </div>
       <div className="game-info">
         <div className="text">{status}</div>
